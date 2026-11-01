@@ -1,0 +1,129 @@
+
+.em-category-dropdown {
+  position: relative;
+  flex: 0 1 210px;
+  min-width: 175px;
+  z-index: 20;
+}
+
+.em-category-trigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  width: 100%;
+  height: 42px;
+  padding: 0 15px;
+  background: white;
+  border: 1px solid #dce3ed;
+  border-radius: 25px;
+  color: #0c1b40;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.em-category-trigger span {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.em-category-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  width: 290px;
+  max-height: 420px;
+  overflow-y: auto;
+  padding: 8px;
+  background: white;
+  border: 1px solid #dce3ed;
+  border-radius: 15px;
+  box-shadow: 0 15px 35px rgba(12,27,64,0.15);
+}
+
+.em-category-all,
+.em-category-group {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  width: 100%;
+  padding: 12px;
+  background: transparent;
+  border: 0;
+  border-radius: 9px;
+  color: #263653;
+  text-align: left;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.em-category-group span {
+  flex: 1;
+}
+
+.em-category-all:hover,
+.em-category-group:hover {
+  background: #edf5ff;
+  color: #0866f5;
+}
+
+.em-category-children {
+  display: flex;
+  flex-direction: column;
+  padding: 3px 0 8px 35px;
+}
+
+.em-category-children button {
+  padding: 9px 11px;
+  background: transparent;
+  border: 0;
+  border-radius: 7px;
+  text-align: left;
+  font-size: 12px;
+  color: #64748b;
+  cursor: pointer;
+}
+
+.em-category-children button:hover,
+.em-category-children button.active {
+  background: #eaf4ff;
+  color: #0866f5;
+}
+
+@media (max-width: 520px) {
+  .em-category-dropdown {
+    flex: 1 1 150px;
+  }
+
+  .em-category-menu {
+    width: min(290px, 88vw);
+  }
+}
+
+.em-category-trigger {
+  height: 40px;
+  border-radius: 12px;
+  border-color: #dde6f5;
+  background: #ffffff;
+  font-size: 12px;
+}
+
+.em-category-trigger:hover,
+.em-category-trigger[aria-expanded="true"] {
+  border-color: #2563eb;
+  background: #f0f6ff;
+  color: #2563eb;
+}
+
+.em-category-menu {
+  border: 1px solid #dde6f5;
+  box-shadow: 0 15px 35px rgba(12, 27, 64, 0.14);
+}
+
+.em-category-group:hover,
+.em-category-children button.active {
+  color: #2563eb;
+  background: #edf4ff;
+}

@@ -1,0 +1,173 @@
+
+.tracking-section {
+  padding: 75px 5%;
+  background: #f3f7ff;
+  scroll-margin-top: 20px;
+}
+
+.tracking-container {
+  max-width: 900px;
+  margin: auto;
+  background: #ffffff;
+  border: 1px solid #dde7f5;
+  border-radius: 22px;
+  padding: 40px;
+  box-shadow: 0 12px 35px rgba(12,27,64,0.06);
+}
+
+.tracking-title {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.tracking-title > svg {
+  color: #0866f5;
+}
+
+.tracking-title h2 {
+  color: #0c1b40;
+  font-size: 30px;
+  margin: 12px 0;
+}
+
+.tracking-title p {
+  color: #64748b;
+  font-size: 15px;
+}
+
+.tracking-form {
+  display: flex;
+  gap: 12px;
+}
+
+.tracking-form input {
+  flex: 1;
+  min-width: 0;
+  padding: 15px;
+  border: 1px solid #dce5f2;
+  border-radius: 10px;
+  outline: none;
+  font-size: 15px;
+}
+
+.tracking-form input:focus {
+  border-color: #0866f5;
+}
+
+.tracking-form button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  border: none;
+  border-radius: 10px;
+  background: #0866f5;
+  color: white;
+  padding: 14px 24px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.tracking-form button:hover {
+  background: #0053d6;
+}
+
+.tracking-demo {
+  margin-top: 12px;
+  color: #64748b;
+  font-size: 13px;
+}
+
+.tracking-error {
+  margin-top: 18px;
+  color: #b42318;
+}
+
+/* ORDER RESULT */
+
+.tracking-result {
+  margin-top: 30px;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 24px;
+}
+
+.tracking-order-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  flex-wrap: wrap;
+  padding-bottom: 22px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.tracking-order-header h3 {
+  margin: 0 0 8px;
+  color: #0c1b40;
+}
+
+.tracking-order-header p {
+  color: #64748b;
+}
+
+.tracking-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #eaf4ff;
+  color: #0866f5;
+  padding: 10px 16px;
+  border-radius: 30px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+/* PROGRESS STEPS */
+
+.tracking-timeline {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.tracking-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 12px;
+  color: #94a3b8;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.tracking-step.completed {
+  color: #0866f5;
+}
+
+/* MOBILE */
+
+@media (max-width: 650px) {
+  .tracking-container {
+    padding: 24px 17px;
+  }
+
+  .tracking-form {
+    flex-direction: column;
+  }
+
+  .tracking-form button {
+    width: 100%;
+  }
+
+  .tracking-timeline {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .tracking-title h2 {
+    font-size: 25px;
+  }
+}
