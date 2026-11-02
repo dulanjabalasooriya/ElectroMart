@@ -40,8 +40,14 @@ const orderSchema = new mongoose.Schema(
       min: 0,
     },
 
-    deliveryFee: { type: Number, default: null },
-    total: { type: Number, default: null },
+    deliveryFee: { type: Number, 
+      required: true,
+      default: 0,
+    },
+  
+    total: { type: Number, 
+      required: true,
+     },
 
     paymentMethod: {
       type: String,

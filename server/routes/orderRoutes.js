@@ -124,6 +124,9 @@ router.post("/", async (req, res) => {
 
         subtotal += product.price * quantity;
       }
+      // Demo orders include free delivery
+const deliveryFee = 0;
+const total = subtotal + deliveryFee;
 
       const [order] = await Order.create(
         [
@@ -140,8 +143,8 @@ router.post("/", async (req, res) => {
             },
             items: orderItems,
             subtotal,
-            deliveryFee: null,
-            total: null,
+            deliveryFee,
+            total,
             paymentMethod: "Cash on Delivery",
             paymentStatus: "Pending",
             orderStatus: "Pending",
